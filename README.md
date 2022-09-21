@@ -34,13 +34,16 @@ print(cameras.rooms()[model(torch.tensor(cameras.snapshot()))])
 This could be a hard goal to achieve. The fundamental idea is: Using the current WiFi 6e, it is possible to achieve bit rate of 1200Mbps via a 160MHz channel. The bit rate of 1080p video at 60fps is around 4,500 to 9,000 Kbps. For 4K @ 60fps HEVC, the bit rate if around 48 to 54 Mbps. As a result, WiFi should be sufficient to be used for video transmission replacing HDMI (in some senarios). However, TCP is of course not an option for such purpose because the necessity of package verification is very low. Moreover, even packet switch could be abandoned. Circuit switching might be a better option for this usage.  
 
 
-## Other tasks
+## Additional tasks
 
 There are several other tasks that is not really the core of the project but can be a interesting feature to add
 
 1. GUI. This would be an application developed using the API.
 2. Local file sharing. A cross-platform file local sharing utility.
 3. NAS. This would include the installation and support for RAID, web scrapers, etc.
+4. Protocol routing. Being able to control the routing protocol on different devices to different websites/servers.
+5. Smart Home protocol support.
+6. Integration of sensors using lan-man supported hardware.
 
 ## Relavent Projects
 
