@@ -1,14 +1,11 @@
 import registration
+from utils import check_bool_input
 
-devices = registration.scan()
+devices = registration.scan(filter_unregistered=True)
 for device in devices:
     print(f"Register device:\n{device}\n?")
-    input_switch = input("[Yes/No]")
-    match input_switch:
-        case "yes" | "y" | "Yes":
-            device.register()
-        case "no" | "n" | "No":
-            continue
-        case _:
-            raise Exception("Illegal input.")
+    if check_bool_input():
+        device.register()
+        print("Success!")
+
 
